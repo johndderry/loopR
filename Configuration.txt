@@ -1,0 +1,63 @@
+﻿Configuration Parameters used in ~/.loopR/config
+These are used by the engine, but not the client or server.
+
+INPORT=4953
+
+	This is the port number on localhost for engine to receive commands from
+the client
+
+OUTPORT=4952
+
+	This is the starting port number on OUTHOST for engine to send data to
+the client
+
+OUTHOST=127.0.0.1
+
+	This is the host IP address or hostname of the client
+
+TRACKPUT=4950
+
+	This is the port number on TRACKHOST which server is listening on to receive track data 
+
+TRACKGET=4951
+
+	This is the port number on TRACKHOST which server is listening on to send track data
+
+TRACKHOST=127.0.0.1
+
+	This is the host IP address/Hostname of the track server host
+
+CLIENT=~/loopR/frontend/imgui/client
+
+	This is the path to the client executable that the engine will start
+
+CINTERNAL=false
+
+	Specifies whether the internal metronome clicks are used or not.
+	If CINTERNAL is false, then send midi clicks on channel 10.
+
+AUTOUPLOAD=false
+
+	Specifies whether tracks are automatically uploaded to server when being created
+
+LONGTRACKS=true
+
+	Allow longtracks to be created. Otherwise, create multiple tracks.
+
+DOWNBEAT=36
+
+	Specifies the midi note pitch for the downbeat midi click ( bass drum )
+
+FILL=46
+
+	Specifies the midi note pitch for the fill midi click ( open hi-hat )
+
+CLICK=42
+
+	Specifies the midi note pitch for the beat midi click ( closed hi-hat )
+
+VELOCITY=111
+
+	Specifies the velocity of midi-based click events
+
+

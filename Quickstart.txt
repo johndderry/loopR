@@ -1,0 +1,58 @@
+﻿QUICKSTART INSTALLATION AND OPERATION
+
+1. Unpack the distribution in your home directory.
+
+> cd
+> tar -zxf loopRxxx.tgz
+
+If you put it somewhere else you will want to change the client path. See below.
+
+2. Build the executables
+
+Do 'make' from parent directory to make everything.
+
+> cd loopR
+> make
+
+These executables will be built with make: 
+  ./engine/loopR
+  ./frontend/imgui/client
+  ./server/server
+
+3. Set up ~/.loopR
+
+Create ~/.loopR ( $HOME/.loopR ). Copy the *.zz files from the distribution top
+directory into ~/.loopR .  These are the internal metronome sound files.
+
+> mkdir ~/.loopR
+> cp *.zz ~/.loopR
+
+If you want to change any setup parameters for the engine, they will be in
+~./loopR/config. This file will be created with defaults the first time loopR
+is run.
+
+4(a).   Start the engine and client
+
+> ./engine/loopR
+
+
+OR
+
+4(b).	Start the server, engine and client
+
+On one machine start the server application.
+
+> ./server/server &
+
+Start a client engine to initialize the server then quit ( do this once ):
+
+> ./engine/loopR -H -i
+
+Then start multiple pairs of engine and client ( these will need to be on
+different physical hosts. First modify the TRACKHOST address in the
+configuration file for these clients )
+
+> ./engine/loopR -Hyourclientname
+
+
+
